@@ -1,25 +1,15 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-import { withRouter } from "react-router-dom";
-=======
 import BookmarksContext from "../BookmarksContext";
->>>>>>> context-startingpoint
 import config from "../config";
 import "./AddBookmark.css";
 
 const Required = () => <span className="AddBookmark__required">*</span>;
 
 class AddBookmark extends Component {
-<<<<<<< HEAD
-  static defaultProps = {
-    onAddBookmark: () => {},
-  };
-=======
   // static defaultProps = {
   //   onAddBookmark: () => {}
   // };
   static contextType = BookmarksContext;
->>>>>>> context-startingpoint
 
   state = {
     error: null,
@@ -123,11 +113,7 @@ class AddBookmark extends Component {
             />
           </div>
           <div className="AddBookmark__buttons">
-<<<<<<< HEAD
-            <button type="button" onClick={onClickCancel}>
-=======
             <button type="button" onClick={this.handleClickCancel}>
->>>>>>> context-startingpoint
               Cancel
             </button>{" "}
             <button type="submit">Save</button>
@@ -138,4 +124,4 @@ class AddBookmark extends Component {
   }
 }
 
-export default withRouter(AddBookmark);
+export default AddBookmark;
