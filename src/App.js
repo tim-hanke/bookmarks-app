@@ -4,7 +4,6 @@ import AddBookmark from "./AddBookmark/AddBookmark";
 import BookmarkList from "./BookmarkList/BookmarkList";
 import BookmarksContext from "./BookmarksContext";
 import Nav from "./Nav/Nav";
-import Rating from "./Rating/Rating";
 import config from "./config";
 import "./App.css";
 
@@ -63,7 +62,7 @@ class App extends Component {
 
     return (
       <main className="App">
-        <h1>Bookmarks!!</h1>
+        <h1>Bookmarks!</h1>
         <BookmarksContext.Provider value={contextValue}>
           <Nav />
           <div className="content" aria-live="polite">
