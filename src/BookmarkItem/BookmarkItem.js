@@ -20,7 +20,8 @@ function deleteBookmarkRequest(bookmarkId, callback) {
           throw error;
         });
       }
-      return res.json();
+      // console.log(res.json());
+      // return res.json();
     })
     .then((data) => {
       // call the callback when the request is successful
@@ -47,6 +48,12 @@ export default function BookmarkItem(props) {
           </div>
           <p className="BookmarkItem__description">{props.description}</p>
           <div className="BookmarkItem__buttons">
+            <button
+              className="BookmarkIten__description"
+              onClick={() => props.history.push(`/edit-bookmark/${props.id}`)}
+            >
+              Edit
+            </button>
             <button
               className="BookmarkItem__description"
               onClick={() => {

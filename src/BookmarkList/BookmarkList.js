@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import BookmarksContext from "../BookmarksContext";
 import BookmarkItem from "../BookmarkItem/BookmarkItem";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import "./BookmarkList.css";
 
 class BookmarkList extends Component {
@@ -14,7 +14,11 @@ class BookmarkList extends Component {
         <h2>Your bookmarks</h2>
         <ul className="BookmarkList__list" aria-live="polite">
           {bookmarks.map((bookmark) => (
-            <BookmarkItem key={bookmark.id} {...bookmark} />
+            <BookmarkItem
+              key={bookmark.id}
+              {...bookmark}
+              history={this.props.history}
+            />
           ))}
         </ul>
       </section>
